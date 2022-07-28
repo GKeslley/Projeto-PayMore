@@ -1,0 +1,43 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.barra-bg {
+  background: var(--color-v1);
+  height: 100vh;
+}
+
+.barra-conteudo ul {
+  display: grid;
+  margin-top: 30px;
+  color: var(--color-12);
+}
+
+.barra-conteudo li:hover {
+  background: var(--color-12);
+}
+
+.barra-conteudo li:hover a {
+  color: var(--color-v1);
+}
+
+.barra-conteudo li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 8px;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.barra-conteudo li img {
+  margin-right: 15px;
+}
+
+.barra-conteudo li a {
+  color: var(--color-12);
+}
+
+.barra-conteudo li + li {
+  margin-top: 25px;
+}

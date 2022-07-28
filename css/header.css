@@ -1,0 +1,49 @@
+.header-bg {
+  background: white;
+}
+
+.header-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header-conteudo h1 {
+  font-weight: 800;
+  color: var(--color-v1);
+}
+
+.header-imgs {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 0px 20px;
+}
+
+.header-conteudo input {
+  width: 100%;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
+  background: #f2f2f2;
+  position: relative;
+}
+
+.header-conteudo input::placeholder {
+  font-size: 1rem;
+}
+
+.header-conteudo form {
+  position: relative;
+  align-items: center;
+}
+
+.header-conteudo form img {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+}
