@@ -47,7 +47,7 @@
 }
 
 [data-bar].animation {
-  animation: showBar 0.3s forwards;
+  animation: showBar 0.5s forwards;
 }
 
 @keyframes showBar {
