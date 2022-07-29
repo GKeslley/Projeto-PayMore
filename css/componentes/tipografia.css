@@ -2,6 +2,14 @@
   font: 800 2rem/1.1 "Poppins", sans-serif;
 }
 
+.font-M {
+  font: 400 1.8rem/1.5 "Poppins", sans-serif;
+}
+
 .font-L {
   font: 400 1.2rem/1.5 "Poppins", sans-serif;
+}
+
+.font-p {
+  font: 400 1.1rem/1.2 "Poppins", sans-serif;
 }

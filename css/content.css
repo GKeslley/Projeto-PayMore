@@ -1,25 +1,22 @@
 .content {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 0.1fr 1fr;
+  height: 100vh;
 }
 
 .barra-bg {
   background: var(--color-v1);
-  height: 100vh;
+  height: 100%;
+}
+
+.barra-conteudo {
+  display: grid;
+  justify-content: center;
 }
 
 .barra-conteudo ul {
-  display: grid;
   margin-top: 30px;
   color: var(--color-12);
-}
-
-.barra-conteudo li:hover {
-  background: var(--color-12);
-}
-
-.barra-conteudo li:hover a {
-  color: var(--color-v1);
 }
 
 .barra-conteudo li {
@@ -28,14 +25,42 @@
   padding: 8px;
   transition: 0.3s;
   align-items: center;
+  justify-self: center;
 }
 
 .barra-conteudo li img {
-  margin-right: 15px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.barra-conteudo li:hover {
+  background: var(--color-12);
 }
 
 .barra-conteudo li a {
   color: var(--color-12);
+  display: none;
+}
+
+.barra-conteudo li a.ativo {
+  display: block;
+}
+
+[data-bar].animation {
+  animation: showBar 0.3s forwards;
+}
+
+@keyframes showBar {
+  from {
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.barra-conteudo li:hover a {
+  color: var(--color-v1);
 }
 
 .barra-conteudo li + li {

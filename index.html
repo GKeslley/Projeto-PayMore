@@ -32,7 +32,7 @@
   </header>
 
   <section class="content">
-    <div class="barra-bg">
+    <div class="barra-bg" data-bar>
       <div class="barra-conteudo container">
         <ul>
           <li class="font-L">
@@ -68,26 +68,70 @@
       </div>
     </div>
 
-    <div class="container">
+    <article class="introducao container-2">
       <div>
-        <ul>
-          <li>Total</li>
-          <li>Prioridade</li>
-          <li>Gasto no mês</li>
-        </ul>
+        <div class="informacoes">
+          <ul>
+            <li>
+              <div class="text">
+                <span class="font-M">R$ 4500</span>
+                <p class="font-p">Total</p>
+              </div>
+              <img src="./imgs/infos-copy/total2.svg" alt="">
+            </li>
+
+            <li class="font-L">
+              <div class="text">
+                <span class="font-M">Prioridade</span>
+                <p>Prioridade</p>
+              </div>
+              <img src="./imgs/infos-copy/analytics-copy.svg" alt="">
+            </li>
+
+            <li class="font-L">
+              <div class="text">
+                <span class="font-M">R$ 1000</span>
+                <p>Gastos</p>
+              </div>
+              <img src="./imgs/infos-copy/gastos-copy.svg" alt="">
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <article class="informacoes">
-        <div>
-          <h1>Adicione o item</h1>
+      <article class="charts">
+        <div class="adicionar-bg">
+          <div class="adicionar">
+
+            <h1 class="font-L">Adicione o item</h1>
+            <form class="adicionar-form" action="">
+              <input type="text" name="text" id="text" placeholder="Adicionar">
+              <input type="number" name="price" id="price" placeholder="Preço">
+            </form>
+
+            <select name="" id="">
+              <option disabled hidden selected>Prioridade</option>
+              <option value="1">Importante</option>
+              <option value="2">Lazer</option>
+              <option value="3">Necessário</option>
+              <option value="4">Besteira</option>
+            </select>
+          </div>
         </div>
 
-        <div class="charts">
-          <h1>Charts</h1>
+        <div class="chart-bg">
+          <h1 class="font-M">Prioridades</h1>
+          <div class="chart">
+            <canvas id="myChart" width="400" height="400"></canvas>
+          </div>
         </div>
       </article>
-    </div>
+
+    </article>
+
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>

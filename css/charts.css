@@ -1,0 +1,85 @@
+.charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 25px;
+}
+
+.adicionar-bg {
+  background: var(--color-12);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.adicionar {
+  display: grid;
+  padding: 20px;
+}
+
+.adicionar h1 {
+  margin-bottom: 25px;
+}
+
+.adicionar-form {
+  display: grid;
+  margin-bottom: 15px;
+  gap: 15px 0px;
+}
+
+.adicionar-form #text {
+  background: none;
+  border: 2px solid #c2c1c1;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.adicionar-form #price {
+  background: none;
+  border: 2px solid #c2c1c1;
+  padding: 5px 10px;
+  max-width: 30%;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+select {
+  justify-self: start;
+  border: 2px solid #b4b3b3;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #e7e2e20c;
+}
+
+.chart {
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+.chart canvas {
+  margin-top: 15px;
+}
+
+.chart-bg {
+  display: grid;
+  background: var(--color-12);
+  border-radius: 4px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chart-bg h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .chart {
+    width: 70%;
+  }
+}
+@media (max-width: 830px) {
+  .charts {
+    grid-template-columns: 1fr;
+    gap: 25px 0px;
+  }
+}

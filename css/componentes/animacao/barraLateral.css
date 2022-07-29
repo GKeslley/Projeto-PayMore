@@ -1,0 +1,32 @@
+@media (max-width: 920px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+  }
+  .introducao {
+    grid-column: 1;
+  }
+  .barra-conteudo {
+    justify-content: initial;
+  }
+  .barra-conteudo ul {
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .barra-conteudo li + li {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 670px) {
+  .barra-conteudo ul {
+    overflow-x: auto;
+  }
+  .barra-conteudo ul li {
+    min-width: 70px;
+  }
+}

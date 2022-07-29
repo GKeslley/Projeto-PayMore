@@ -1,8 +1,12 @@
 @import "./css/header.css";
 @import "./css/content.css";
+@import "./css/informacoes.css";
+@import "./css/charts.css";
 
 @import "./css/global.css";
 
 @import "./css/componentes/componentes.css";
 @import "./css/componentes/cores.css";
 @import "./css/componentes/tipografia.css";
+
+@import "./css/componentes/animacao/barraLateral.css";
