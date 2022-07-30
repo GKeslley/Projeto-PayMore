@@ -3,47 +3,48 @@ export default function initBarraLateral() {
   const imgsBar = document.querySelectorAll("[data-bar] img");
   const elementsBar = document.querySelectorAll("[data-bar] a");
 
-  if (window.matchMedia("(min-width: 920px)").matches) {
-    console.log(true);
-    function showBar() {
+  function showBar() {
+    elementsBar.forEach((item) => {
+      item.classList.add("ativo");
+    });
+
+    imgsBar.forEach((img) => {
+      img.style.marginRight = 15 + "px";
+    });
+
+    bar.style.position = "absolute";
+    bar.classList.add("animation");
+    const innerBottom = Math.abs(bar.getBoundingClientRect().top);
+    bar.style.paddingBottom = innerBottom + "px";
+    outsideBar(this);
+  }
+
+  function outsideBar(element) {
+    onMouseLeave.element = element;
+    element.addEventListener("mouseleave", onMouseLeave);
+  }
+
+  const onMouseLeave = {
+    handleEvent() {
+      this.element.removeEventListener("mouseover", onMouseLeave);
+      this.element.style.position = "initial";
+      this.element.style.paddingBottom = 0 + "px";
+      this.element.classList.remove("animation");
+
       elementsBar.forEach((item) => {
-        item.classList.add("ativo");
+        item.classList.remove("ativo");
       });
 
       imgsBar.forEach((img) => {
-        img.style.marginRight = 15 + "px";
+        img.style.marginRight = 0 + "px";
       });
+    },
+  };
 
-      bar.style.position = "absolute";
-      bar.classList.add("animation");
-      const innerBottom = Math.abs(bar.getBoundingClientRect().top);
-      bar.style.paddingBottom = innerBottom + "px";
-      outsideBar(this);
-    }
+  if (window.matchMedia("(min-width: 920px)").matches) {
+    console.log(true);
 
     bar.addEventListener("mouseover", showBar);
-
-    function outsideBar(element) {
-      onMouseLeave.element = element;
-      element.addEventListener("mouseleave", onMouseLeave);
-    }
-
-    const onMouseLeave = {
-      handleEvent() {
-        this.element.removeEventListener("mouseover", onMouseLeave);
-        this.element.style.position = "initial";
-        this.element.style.paddingBottom = 0 + "px";
-        this.element.classList.remove("animation");
-
-        elementsBar.forEach((item) => {
-          item.classList.remove("ativo");
-        });
-
-        imgsBar.forEach((img) => {
-          img.style.marginRight = 0 + "px";
-        });
-      },
-    };
 
     window.addEventListener("resize", () => {
       if (!window.matchMedia("(min-width: 920px)").matches) {
