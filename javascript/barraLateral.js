@@ -42,8 +42,6 @@ export default function initBarraLateral() {
   };
 
   if (window.matchMedia("(min-width: 920px)").matches) {
-    console.log(true);
-
     bar.addEventListener("mouseover", showBar);
 
     window.addEventListener("resize", () => {
