@@ -1,8 +1,10 @@
-import adicionarItem from "./adicionarItem.js";
-
 export default function initChart() {
   if (document.body.classList.contains("home")) {
     const ctx = document.getElementById("myChart").getContext("2d");
+
+    if (Chart.getChart("myChart")) {
+      Chart.getChart("myChart").destroy();
+    }
 
     const myChart = new Chart(ctx, {
       type: "doughnut",
@@ -32,6 +34,6 @@ export default function initChart() {
         title: {},
       },
     });
+    console.log(myChart);
   }
-  adicionarItem();
 }
