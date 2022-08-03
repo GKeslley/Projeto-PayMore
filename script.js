@@ -1,5 +1,7 @@
+import adicionarItem from "./javascript/adicionarItem.js";
 import initBarraLateral from "./javascript/barraLateral.js";
-import initChart from "./javascript/chart.js";
+import totalInformations from "./javascript/total.js";
 
-initChart();
 initBarraLateral();
+totalInformations();
+adicionarItem();
