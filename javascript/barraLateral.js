@@ -14,7 +14,7 @@ export default function initBarraLateral() {
 
     bar.style.position = "absolute";
     bar.classList.add("animation");
-    const innerBottom = Math.abs(bar.getBoundingClientRect().top);
+    const innerBottom = Math.abs(window.innerHeight);
     bar.style.paddingBottom = innerBottom + "px";
     outsideBar(this);
   }

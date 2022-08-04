@@ -2,23 +2,23 @@ export default function initChart() {
   if (document.body.classList.contains("home")) {
     const ctx = document.getElementById("myChart").getContext("2d");
 
+    const importante = localStorage.getItem("importante");
+    const lazer = localStorage.getItem("lazer");
+    const necessario = localStorage.getItem("necessario");
+    const desnecessario = localStorage.getItem("desnecessario");
+
     if (Chart.getChart("myChart")) {
       Chart.getChart("myChart").destroy();
     }
 
-    const myChart = new Chart(ctx, {
+    new Chart(ctx, {
       type: "doughnut",
       data: {
         labels: ["Importante", "Lazer", "Necessario", "Desnecessario"],
         datasets: [
           {
             label: "My First Dataset",
-            data: [
-              localStorage.getItem("importante"),
-              localStorage.getItem("lazer"),
-              localStorage.getItem("necessario"),
-              localStorage.getItem("desnecessario"),
-            ],
+            data: [importante, lazer, necessario, desnecessario],
             backgroundColor: [
               "rgb(255, 99, 132)",
               "rgb(54, 162, 235)",
@@ -34,6 +34,5 @@ export default function initChart() {
         title: {},
       },
     });
-    console.log(myChart);
   }
 }
