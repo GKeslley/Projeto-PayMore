@@ -11,10 +11,12 @@ export default function totalInformations() {
     sendButton.addEventListener("click", (event) => {
       event.preventDefault();
       localStorage.setItem("total", inputTotal.value);
+      window.location.href = localStorage.getItem("hrefPrincipal");
     });
 
     buttonClear.classList.add("ativo");
     buttonClear.addEventListener("click", () => {
+      window.location.href = localStorage.getItem("hrefPrincipal");
       Object.keys(localStorage).forEach((item) => {
         localStorage.removeItem(item);
       });
@@ -23,6 +25,8 @@ export default function totalInformations() {
 
   if (document.body.classList.contains("home")) {
     const totalElement = totalSubtraido;
+    const hrefPrincipal = window.location.href;
+    localStorage.setItem("hrefPrincipal", hrefPrincipal);
 
     if (localStorage.total && !gastoTotal) {
       const valueTotal = total;
