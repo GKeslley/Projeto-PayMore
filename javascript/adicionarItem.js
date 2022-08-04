@@ -9,6 +9,7 @@ export default function adicionarItem() {
   const historico = document.querySelector(".historico");
   const totalSubtraido = document.querySelector("#valorIndex");
   const gastoSelect = "gasto";
+  const eventos = ["click", "touchstart"];
 
   if (document.body.classList.contains("home")) {
     let value1 = 0;
@@ -105,7 +106,9 @@ export default function adicionarItem() {
       });
     }
 
-    button.addEventListener("click", chartsProparties);
+    eventos.forEach((event) => {
+      button.addEventListener(event, chartsProparties);
+    });
 
     const total = localStorage.getItem("total");
     const gastoTotal = localStorage.getItem("totalComGasto");

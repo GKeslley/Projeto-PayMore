@@ -6,6 +6,7 @@ export default function totalInformations() {
   const totalSubtraido = document.querySelector("#valorIndex");
   const total = localStorage.getItem("total");
   const gastoTotal = localStorage.getItem("totalComGasto");
+  const eventos = ["click", "touchstart"];
 
   if (document.body.classList.contains("total")) {
     sendButton.addEventListener("click", (event) => {
@@ -15,10 +16,12 @@ export default function totalInformations() {
     });
 
     buttonClear.classList.add("ativo");
-    buttonClear.addEventListener("click", () => {
-      window.location.href = localStorage.getItem("hrefPrincipal");
-      Object.keys(localStorage).forEach((item) => {
-        localStorage.removeItem(item);
+    eventos.forEach((event) => {
+      buttonClear.addEventListener(event, () => {
+        window.location.href = localStorage.getItem("hrefPrincipal");
+        Object.keys(localStorage).forEach((item) => {
+          localStorage.removeItem(item);
+        });
       });
     });
   }
