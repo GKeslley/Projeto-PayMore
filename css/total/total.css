@@ -1,0 +1,70 @@
+.total {
+  grid-column: 2;
+}
+
+.total-conteudo {
+  display: grid;
+  background: var(--color-12);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 40px 25px;
+  margin-top: 25px;
+  justify-self: center;
+  height: max-content;
+  align-content: center;
+  grid-column: 2;
+}
+
+.formsTotal {
+  display: grid;
+  justify-items: center;
+}
+
+.total-conteudo h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formsTotal input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-0);
+  display: block;
+}
+
+.formsTotal form {
+  display: grid;
+  margin-bottom: 15px;
+}
+
+.formsTotal input:first-child {
+  margin-bottom: 15px;
+}
+
+.formsTotal button {
+  border: none;
+  background: var(--color-v1);
+  padding: 6px 12px;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 920px) {
+  .total {
+    grid-column: 1;
+  }
+  #total section.content {
+    align-items: center;
+    height: 100%;
+  }
+}
+
+#clearValue {
+  display: none;
+}
+
+#clearValue.ativo {
+  display: block;
+  background: rgb(207, 19, 6);
+}

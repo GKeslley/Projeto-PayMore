@@ -2,6 +2,8 @@
 @import "./css/content.css";
 @import "./css/informacoes.css";
 @import "./css/charts.css";
+@import "./css/total/total.css";
+@import "./css/historico.css";
 
 @import "./css/global.css";
 

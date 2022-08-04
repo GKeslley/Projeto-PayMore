@@ -1,3 +1,8 @@
+.chart-bg {
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
 .charts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -8,6 +13,7 @@
   background: var(--color-12);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
+  margin-bottom: 40px;
 }
 
 .adicionar {
@@ -25,7 +31,8 @@
   gap: 15px 0px;
 }
 
-.adicionar-form #text {
+.adicionar-form #adicionar,
+.adicionar-form #price {
   background: none;
   border: 2px solid #c2c1c1;
   padding: 5px 10px;
@@ -34,12 +41,15 @@
 }
 
 .adicionar-form #price {
-  background: none;
-  border: 2px solid #c2c1c1;
-  padding: 5px 10px;
   max-width: 30%;
+}
+
+.adicionar-form button {
+  background: var(--color-v1);
+  padding: 6px 12px;
+  justify-self: start;
+  border: none;
   border-radius: 4px;
-  font-size: 1rem;
 }
 
 select {
@@ -48,6 +58,7 @@ select {
   border-radius: 4px;
   font-size: 1rem;
   background: #e7e2e20c;
+  margin-bottom: 15px;
 }
 
 .chart {
@@ -80,6 +91,5 @@ select {
 @media (max-width: 830px) {
   .charts {
     grid-template-columns: 1fr;
-    gap: 25px 0px;
   }
 }

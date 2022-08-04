@@ -13,10 +13,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="home">
   <header class="header-bg">
     <div class="header-conteudo container">
-      <h1 class="font-principal">PayMore</h1>
+      <h1 class="font-principal"><a href="./index.html">PayMore</a></h1>
       <form action="">
         <input type="text" name="text" id="text" placeholder="search here">
         <img src="./imgs/lupa.svg" alt="">
@@ -41,13 +41,13 @@
           </li>
 
           <li class="font-L">
-            <img src="./imgs/total.svg" alt="">
-            <a href="./">Total</a>
+            <a href="./total.html" class="responsivo"><img src="./imgs/total.svg" alt=""></a>
+            <a href="./total.html">Total</a>
           </li>
 
           <li class="font-L">
             <img src="./imgs/gastos3.svg" alt="">
-            <a href="./">Gastos</a>
+            <a href="./historico.html">Gastos</a>
           </li>
 
           <li class="font-L">
@@ -74,7 +74,7 @@
           <ul>
             <li>
               <div class="text">
-                <span class="font-M">R$ 4500</span>
+                <span id="valorIndex" class="font-M">R$ 0</span>
                 <p class="font-p">Total</p>
               </div>
               <img src="./imgs/infos-copy/total2.svg" alt="">
@@ -82,7 +82,7 @@
 
             <li class="font-L">
               <div class="text">
-                <span class="font-M">Prioridade</span>
+                <span class="font-M" data-prioridade>Prioridade</span>
                 <p>Prioridade</p>
               </div>
               <img src="./imgs/infos-copy/analytics-copy.svg" alt="">
@@ -90,7 +90,7 @@
 
             <li class="font-L">
               <div class="text">
-                <span class="font-M">R$ 1000</span>
+                <span class="font-M" data-gasto>R$ 0</span>
                 <p>Gastos</p>
               </div>
               <img src="./imgs/infos-copy/gastos-copy.svg" alt="">
@@ -105,17 +105,20 @@
 
             <h1 class="font-L">Adicione o item</h1>
             <form class="adicionar-form" action="">
-              <input type="text" name="text" id="text" placeholder="Adicionar">
+
+              <input type="text" name="adicionar" id="adicionar" placeholder="Adicionar">
               <input type="number" name="price" id="price" placeholder="Preço">
+
+              <select name="" id="">
+                <option value="0">Importante</option>
+                <option value="1">Lazer</option>
+                <option value="2">Necessario</option>
+                <option value="3">Desnecessario</option>
+              </select>
+
+              <button class="font-p" data-buttonAdd>Adicionar</button>
             </form>
 
-            <select name="" id="">
-              <option disabled hidden selected>Prioridade</option>
-              <option value="1">Importante</option>
-              <option value="2">Lazer</option>
-              <option value="3">Necessário</option>
-              <option value="4">Besteira</option>
-            </select>
           </div>
         </div>
 
@@ -126,6 +129,15 @@
           </div>
         </div>
       </article>
+
+      <div class="historico-bg">
+        <div class="historico-conteudo container">
+          <h1 class="font-M">Histórico</h1>
+        </div>
+        <div class="historico">
+
+        </div>
+      </div>
 
     </article>
 
